@@ -6,8 +6,8 @@
 Unified CLI for video frame interpolation supporting multiple VFI models.
 
 Current models:
-- **rife** — Base RIFE (Real-Time Intermediate Flow Estimation), v4.x. Usable but produces noticeably inferior output — ghosting, blurring, and temporal artifacts are common - call this dog shit is unfair but comparatively - it is not good.
-- **sg-rife** — SG-RIFE with DINOv3 semantic injection (RIFE + frozen DINOv3 ViT-S/16). This is the model you actually want. Originally developed by [Wong, Wu, and Lu](https://arxiv.org/abs/2512.18241) — not me.
+- **rife** — Base RIFE (Real-Time Intermediate Flow Estimation), v4.x. Usable but produces low quality results — ghosting, blurring, and temporal artifacts are common - it is not good.
+- **sg-rife** — SG-RIFE with DINOv3 semantic injection (RIFE + frozen DINOv3 ViT-S/16). This is the model you actually want. Developed by [Wong, Wu, and Lu](https://arxiv.org/abs/2512.18241)
 
 ---
 
