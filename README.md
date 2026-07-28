@@ -6,8 +6,8 @@
 Unified CLI for video frame interpolation supporting multiple VFI models.
 
 Current models:
-- **rife** — Base RIFE (Real-Time Intermediate Flow Estimation), v4.x
-- **sg-rife** — SG-RIFE with DINOv3 semantic injection (RIFE + frozen DINOv3 ViT-S/16)
+- **rife** — Base RIFE (Real-Time Intermediate Flow Estimation), v4.x. Usable but produces noticeably inferior output — ghosting, blurring, and temporal artifacts are common - call this dog shit is unfair but comparatively - it is not good.
+- **sg-rife** — SG-RIFE with DINOv3 semantic injection (RIFE + frozen DINOv3 ViT-S/16). This is the model you actually want. Originally developed by [Wong, Wu, and Lu](https://arxiv.org/abs/2512.18241) — not me.
 
 ---
 
@@ -60,6 +60,9 @@ checkpoints/
 
 # With FP16
 .venv/bin/python interpolate.py --model rife --video input.mp4 --exp=2 --fp16
+
+# SageAttention (SG-RIFE only — ~2x attention speedup)
+.venv/bin/python interpolate.py --model sg-rife --video input.mp4 --exp=2 --with-sage
 ```
 
 ### Flags
@@ -77,6 +80,7 @@ checkpoints/
 | `--fp16` | off | Half-precision inference |
 | `--png` | off | Output PNG sequence instead of video |
 | `--ext` | `mp4` | Output video container |
+| `--with-sage` | off | SageAttention acceleration (SG-RIFE only) |
 | `--model-dir` | auto | Custom checkpoint directory |
 
 ---
