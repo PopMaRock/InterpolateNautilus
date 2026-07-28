@@ -1,0 +1,15 @@
+*.pyc
+*.py~
+*.py#
+
+*.pkl
+output/*
+*.mp4
+
+test/
+.idea/
+*.npz
+
+*.zip
+
+.DS_Store

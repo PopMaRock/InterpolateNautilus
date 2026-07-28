@@ -1,0 +1,23 @@
+# Core
+numpy>=1.16
+tqdm>=4.35.0
+opencv-python>=4.1.2
+
+# PyTorch — install with CUDA 13 via:
+#   uv pip install torch torchvision --extra-index-url https://download.pytorch.org/whl/cu130 --python .venv/bin/python
+torch
+torchvision
+triton
+
+# SageAttention 2.2.0 — build from source in ./SageAttention/:
+#   cd SageAttention && EXT_PARALLEL=4 NVCC_APPEND_FLAGS="--threads 8" MAX_JOBS=32 ../.venv/bin/python setup.py install
+# Requires CUDA 13 toolkit (system nvcc) and torch with cu130.
+
+# DINOv3 requirement
+ftfy
+omegaconf
+regex
+scikit-learn
+submitit
+termcolor
+torchmetrics
