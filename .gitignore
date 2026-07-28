@@ -7,9 +7,9 @@ output/*
 *.mp4
 
 test/
+test_frames/
 .idea/
 *.npz
-
 *.zip
 
 .DS_Store
